@@ -10,3 +10,13 @@
         Veti primi: 'cmi', 'center', 'for', 'machines'
         Veti printa: ['cm', 'cente', 'fo', 'machine']
 """
+
+x = input()
+y = []
+
+while x != 'exit':
+    x = x[:-1]
+    y.append(x)
+    x = input()
+
+print(y)

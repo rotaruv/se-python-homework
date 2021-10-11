@@ -14,3 +14,16 @@
         Veti primi: 'cojoc'
         Veti printa: True
 """
+
+x = input()
+
+is_palindrom = True
+
+for n in range(int(len(x) / 2)):
+    if x[n] != x[len(x) - n - 1]:
+        is_palindrom = False
+
+if is_palindrom:
+    print(True)
+else:
+    print(False)

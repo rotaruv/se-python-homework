@@ -7,3 +7,12 @@
         Veti primi: 'Center for Intelligent Machines', 2, 5
         Veti printa: 'nter'
 """
+
+
+a = input()
+x = int(input())
+y = int(input())
+
+sl = slice(x, y + 1)
+
+print(a[sl])

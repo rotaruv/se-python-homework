@@ -7,11 +7,12 @@
 # iar in variabila t2 vom stoca un tuplu cu 3 element 3, 4, 5
 t1 = (1, 2)
 t2 = (3, 4, 5)
+t3 = [2]
 
 # Vom crea variabila l1 iar ca si valoare, va avea o lista compusa din
 # concatenarea celor 2 tupluri. Primele elemente vor fi cele din l1.
 # Vom converti cele 2 tupluri in liste, inainte sa le concatenam
-l1 = list(t1) + list(t2)
+l1 = list(t1) + t3 + list(t2)
 
 # Afisam lista
 print(l1)

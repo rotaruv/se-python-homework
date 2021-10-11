@@ -6,3 +6,12 @@
         Veti primi: 5
         Veti printa: 15
 """
+
+x = int(input())
+
+sum = 0
+
+for n in range(x + 1):
+    sum += n
+
+print(sum)

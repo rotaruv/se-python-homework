@@ -8,3 +8,17 @@
         Veti primi 6, veti afisa [1, 2, 3, 4, 5]
         Veti primi 5, veti afisa [1, 4, 9, 16]
 """
+
+
+x = int(input())
+
+l1 = []
+
+if x % 2 == 0:
+    for n in range(x):
+     l1.append(n)
+else:
+    for n in range(x):
+        l1.append(n**2)
+
+print(l1)
