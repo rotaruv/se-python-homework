@@ -9,10 +9,16 @@
 
 
 def dec(func):
-    def wrapper(*args, **kwargs):
+    def wrapper(**kwargs):
         print('cmi')
         # your code goes here
-        func(*args, **kwargs)
+        n = 1
+        for value in kwargs.values():
+            if n == 2:
+                print(value)
+                break
+            n += 1
+        func (**kwargs)
 
     return wrapper
 
@@ -23,3 +29,4 @@ def f(x, y):
 
 
 f(x=1, y=2)
+

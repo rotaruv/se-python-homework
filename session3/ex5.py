@@ -11,3 +11,8 @@
         si definitia functiei)
         - hint: list comprehensions (google it if you don't know it already)
 """
+
+def add_one(numbers):
+    return [n + 1 for n in numbers]
+
+# print(add_one([1,2,3]))

@@ -41,6 +41,27 @@ def generate_random_str(str_length):
 
 
 prefix = input('Give me an prefix\n')
+sufix = input('Give me a sufix\n')
 x = int(input('Give me a number to generate the random string\n'))
 
-print(add_prefix(prefix, generate_random_str(x)))
+def add_suffix(sfx):
+    return add_prefix(prefix, generate_random_str(x)) + sfx
+
+level = 3
+cont = 0
+
+while level > 0:
+    for i in sufix:
+        # daca gasim o litera in prefix oprim executia for si trecem la urmatoarea comanda folosindu-ne de break
+        if i in prefix:
+            cont += 1
+            sufix = input('The suffix has a letter in prefix, give me another one\n')
+            break 
+    level -= 1
+    if cont == 3:
+        print(add_prefix(prefix, generate_random_str(x)))
+    # daca cont == 0 inseamna ca sufixul nu are nici o litera in prefix si oprim executia while --> l = 0
+    elif cont == 0:
+        print(add_suffix(sufix))
+        level = 0
+

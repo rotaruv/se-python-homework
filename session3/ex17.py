@@ -19,3 +19,22 @@
             cmicmi
             b
 """
+import random
+import string 
+
+def add_text_in_file_decorator(func):
+    def wrapper(*args):
+        func(args[0])
+        # folosim append --> 'a'
+        with open('output17.data', 'a') as f:
+            f.write(func(args[0]))
+            f.writelines('\n')
+
+    return wrapper
+
+@add_text_in_file_decorator
+def f(x):
+    letters = string.ascii_letters
+    return ''.join(random.choice(letters) for _ in range(x))
+
+# f(20)

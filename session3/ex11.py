@@ -7,7 +7,17 @@
     Functia decorata este f.
 """
 
+def add_text_dec(func):
+    def wrapper():
+        with open('output11.data', 'w') as file:
+            file.write(func())
+
+    return wrapper
 
 # decorate me
+@add_text_dec
 def f():
     return "CMI"
+
+f()
+

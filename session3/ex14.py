@@ -12,3 +12,12 @@
         daca apelez get_me_numbers(3)
             --> (3 + 5) * 5 + 3 = 43
 """
+
+def get_me_number(x):
+    x += 5
+    def multiply_by_5(x):
+        return x * 5
+    x = multiply_by_5(x) + 3
+    print(x)
+
+# get_me_number(2)

@@ -12,3 +12,8 @@
     Observatii:
         - functia trebuie sa aiba MAXIM 1 linie de cod ca si body
 """
+
+def add_strings(prefix, word, suffix):
+    return prefix + word + suffix
+
+print(add_strings('asd', 'fgh', 'jkl'))

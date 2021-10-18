@@ -5,7 +5,14 @@
 
 """
 
+def change_output_decorator(func):
+    def wrapper():    
+        return func().upper()
+    return wrapper
 
 # decoarate me
+@change_output_decorator
 def f():
     return 'cmi'
+
+print(f())

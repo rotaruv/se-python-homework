@@ -4,8 +4,10 @@
 """
 
 
-def power(x, y):
-    return x ** y
+def power(x, y, z):
+    return x ** y ** z
 
-
-print(power(2, 3))
+# x ** y ** z sau (x ** y) ** z
+# (2 ** 3) ** 2 = 64
+# 2 ** 3 ** 2 = 512
+print(power(2, 3, 2))
